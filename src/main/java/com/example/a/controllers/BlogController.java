@@ -33,7 +33,7 @@ public class BlogController {
     }
 
     @PutMapping("/{blogId}")
-    public Blog modifyBlog(@RequestBody BlogPayload payload, int blogId) {
+    public Blog modifyBlog(@RequestBody BlogPayload payload, @PathVariable int blogId) {
         return this.blogService.modifyBlog(payload, blogId);
     }
 

@@ -34,9 +34,11 @@ public class BlogService {
 
     public Blog modifyBlog(BlogPayload payload, int blogId) {
         Blog found = findBlogById(blogId);
-        found.getCategory() = payload.getCategory();
-        found.getTitle() = payload.getTitle();
-        found.getContent() = payload.getContent();
+        found.setCategory(payload.getCategory());
+        found.setTitle(payload.getTitle());
+        found.setContent(payload.getContent());
+        return found;
     }
+
 
 }
