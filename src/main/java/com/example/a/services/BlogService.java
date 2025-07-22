@@ -15,7 +15,6 @@ public class BlogService {
     public Blog saveBlog(BlogPayload payload) {
         Blog newBlog = new Blog(payload.getCategory(), payload.getTitle(), payload.getContent(), "https://picsum.photos/200/300");
         this.fakeBlogDb.add(newBlog);
-        System.out.println("blog " + newBlog.getTitle() + " added");
         return newBlog;
     }
 
