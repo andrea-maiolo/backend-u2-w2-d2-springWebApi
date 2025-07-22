@@ -38,8 +38,9 @@ public class BlogController {
     }
 
     @DeleteMapping("/{blogId}")
-    public String deleteBlog() {
-        return "blog deleted";
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteBlog(@PathVariable int blogId) {
+        this.blogService.deleteBlog(blogId);
     }
 
 }

@@ -40,5 +40,10 @@ public class BlogService {
         return found;
     }
 
+    public void deleteBlog(int blogId) {
+        Blog found = findBlogById(blogId);
+        fakeBlogDb.remove(found);
+    }
+
 
 }
